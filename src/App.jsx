@@ -1,16 +1,19 @@
 import { BrowserRouter } from "react-router-dom"
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
 import { Analytics } from "@vercel/analytics/react"
+// import Sidebar from "./components/Sidebar";
+// import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
 const App = () => {
-  import { SpeedInsights } from "@vercel/speed-insights/next"
+
   return (
 
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Analytics/>
-          <SpeedInsights/>
+        <Navbar />
+          <Analytics />
           <Hero />
 
         </div>
