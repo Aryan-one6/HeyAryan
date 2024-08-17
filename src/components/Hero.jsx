@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { styles } from "../styles";
+import myCV from "../assets/my_cv.pdf"; // Importing your CV
 
 const Hero = () => {
   return (
@@ -20,10 +22,37 @@ const Hero = () => {
             Bringing visions to life <br className='sm:block hidden' />
             through cutting-edge web Technologies.
           </p>
+
+          {/* Social Media Icons and Download CV Button */}
+          <div className='flex flex-col sm:flex-row sm:items-center mt-8'> {/* Added mt-8 for spacing */}
+            <div className='flex gap-4'>
+              <a href='https://www.linkedin.com/in/naresh-parashar-a34676213/' target='_blank' rel='noopener noreferrer'>
+                <FaLinkedin className='text-white text-2xl hover:text-[#0077B5] transition-colors duration-200' />
+              </a>
+              <a href='https://github.com/Aryan-one6/' target='_blank' rel='noopener noreferrer'>
+                <FaGithub className='text-white text-2xl hover:text-[#333] transition-colors duration-200' />
+              </a>
+              <a href='https://instagram.com/Aryan_one6/' target='_blank' rel='noopener noreferrer'>
+                <FaInstagram className='text-white text-2xl hover:text-[#E4405F] transition-colors duration-200' />
+              </a>
+              <a href='https://wa.me/+919354249191/' target='_blank' rel='noopener noreferrer'>
+                <FaWhatsapp className='text-white text-2xl hover:text-[#25D366] transition-colors duration-200' />
+              </a>
+            </div>
+
+            {/* Download CV Button */}
+            <div className='mt-4 sm:mt-0 sm:ml-6'>
+              <a
+                href={myCV} // Linking to your CV
+                download
+                className='bg-[#915EFF] text-white py-2 px-4 rounded-lg hover:bg-[#7a49d8] transition-colors duration-200'
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-
-
 
       <div className='absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center'>
         <a href='#about'>

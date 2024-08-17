@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from './components'
+import { About, Contact, EarthCanvas, Experience, Feedbacks, Hero, Navbar, Tech, Works } from './components'
 import { Analytics } from "@vercel/analytics/react"
 // import Sidebar from "./components/Sidebar";
 // import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -23,8 +23,9 @@ const App = () => {
         <Works />
         <Feedbacks />
         <div className="reaktive z-0">
+          <EarthCanvas/>
           <Contact />
-          <StarsCanvas />
+          {/* <StarsCanvas /> */}
         </div>
       </div>
     </BrowserRouter>

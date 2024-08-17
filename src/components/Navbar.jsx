@@ -301,16 +301,16 @@ const Navbar = () => {
 
             {/* Social icons at the bottom */}
             <div className='flex justify-start gap-4 mt-6'>
-              <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer'>
+              <a href='https://www.linkedin.com/in/naresh-parashar-a34676213/' target='_blank' rel='noopener noreferrer'>
                 <FaLinkedin className='text-white text-2xl hover:text-[#0077B5] transition-colors duration-200' />
               </a>
-              <a href='https://github.com' target='_blank' rel='noopener noreferrer'>
+              <a href='https://github.com/Aryan-one6/' target='_blank' rel='noopener noreferrer'>
                 <FaGithub className='text-white text-2xl hover:text-[#333] transition-colors duration-200' />
               </a>
-              <a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
+              <a href='https://instagram.com/Aryan_one6/' target='_blank' rel='noopener noreferrer'>
                 <FaInstagram className='text-white text-2xl hover:text-[#E4405F] transition-colors duration-200' />
               </a>
-              <a href='https://wa.me' target='_blank' rel='noopener noreferrer'>
+              <a href='https://wa.me/+919354249191' target='_blank' rel='noopener noreferrer'>
                 <FaWhatsapp className='text-white text-2xl hover:text-[#25D366] transition-colors duration-200' />
               </a>
             </div>
