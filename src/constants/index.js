@@ -182,13 +182,13 @@ const testimonials = [
       "I thought it was impossible to make a website as beautiful as our product, but Aryan proved me wrong.",
     name: "Saumya Srijan",
     designation: "Founder",
-    company: "Xtrimis.com",
+    company: "Xtrimis",
   },
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Aryan does.",
     name: "Shailesh kumar",
-    designation: "Founer & CEO",
+    designation: "Owner",
     company: "Nutri Booster",
   },
   {
