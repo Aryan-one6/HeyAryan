@@ -51,7 +51,7 @@ const Tech = () => {
               ease: "easeInOut", // Smooth transition
             }}
             style={{ 
-              boxShadow: "0px 0px 5px rgba(145, 94, 255, 0.3)", // Initial light effect
+              boxShadow: "0px 0px 10px rgba(145, 94, 255, 0.3)", // Initial light effect
             }}
           >
             <img src={technology.icon} alt={technology.name} className="w-16 h-16 object-contain" />
