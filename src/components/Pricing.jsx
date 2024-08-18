@@ -7,14 +7,14 @@ import { textVariant, fadeIn } from "../utils/motion";
 const pricingPlans = [
   {
     title: "Single Page Website",
-    price: "Start from ₹11k",
+    price: "Start from ₹10k",
     description:
       "Perfect for personal portfolios or simple landing pages. A clean, responsive single-page website tailored to your needs.",
     features: ["Responsive Design", "SEO Optimized", "Fast Loading Speed"],
   },
   {
     title: "Dynamic Website",
-    price: "Start from ₹16k",
+    price: "Start from ₹18k",
     description:
       "Ideal for businesses needing multi-page websites with dynamic content. Custom CMS integration for easy updates.",
     features: ["Content Management", "Customizable Design", "SEO & Analytics"],
