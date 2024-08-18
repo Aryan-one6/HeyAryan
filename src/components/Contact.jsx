@@ -1,14 +1,12 @@
+
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
-//import { BallCanvas  } from "./canvas";
-
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-
 
 const Contact = () => {
   const formRef = useRef();
@@ -34,22 +32,18 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // template_dgm5t2m
-    // service_fs8qmip
-    // 8q7XTtY8X8ppU2kNy
-
     emailjs
       .send(
-        'service_fs8qmip',
-        'template_dgm5t2m',
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Aryan",
+          to_name: "JavaScript Mastery",
           from_email: form.email,
-          to_email: "Parashar.one6@gmail.com",
+          to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
-        '8q7XTtY8X8ppU2kNy'
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -73,7 +67,7 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-row flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`} style={{ marginTop: '0', paddingTop: '0' }}
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}

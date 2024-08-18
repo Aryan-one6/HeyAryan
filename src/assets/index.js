@@ -19,7 +19,7 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import nextjs from "./tech/nextjs.png";
 import Canva from "./tech/Canva.png";
 import bootstrap from "./tech/bootstrap.png";
 
@@ -58,10 +58,10 @@ export {
   nodejs,
   reactjs,
   //redux,
-  bootstrap,
+  // bootstrap,
   tailwind,
   typescript,
-  threejs,
+  // threejs,
   meta,
   shopify,
   //starbucks,
@@ -74,4 +74,6 @@ export {
   //carrent,
   //jobit,
   tripguide,
+  bootstrap,
+  nextjs,
 };

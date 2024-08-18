@@ -29,7 +29,8 @@ import {
   //carrent,
   //jobit,
   tripguide,
-  threejs,
+  // threejs,
+  nextjs,
 } from "../assets";
 
 export const navLinks = [
@@ -104,8 +105,8 @@ const technologies = [
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Next JS",
+    icon: nextjs,
   },
   {
     name: "git",

@@ -1,54 +1,37 @@
-// import React from "react";
-
-// import { BallCanvas } from "./canvas";
-// import { SectionWrapper } from "../hoc";
-// import { technologies } from "../constants";
-
-// const Tech = () => {
-//   return (
-//     <div className='flex flex-row flex-wrap justify-center gap-10'>
-//       {technologies.map((technology) => (
-//         <div className='w-28 h-28' key={technology.name}>
-//           <BallCanvas icon={technology.icon} />
-//         </div>
-//       ))}
-//     </div>
-
-//   );
-// };
-
-// export default SectionWrapper(Tech, "");
-
 import React from "react";
 import { motion } from "framer-motion";
 
-import { BallCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
 const Tech = () => {
   return (
-    <><div id="tech">
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
+    <div id="tech">
+      <motion.div variants={textVariant()} className="text-center">
+        <p className={`${styles.sectionSubText}`}>
           My Skills
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+        <h2 className={`${styles.sectionHeadText}`}>
           Technologies.
         </h2>
       </motion.div>
 
-      <div id="tech" className='flex flex-row flex-wrap justify-center gap-10 mt-10'>
+      <div className="flex flex-row flex-wrap justify-center gap-10 mt-20 mb-20">
         {technologies.map((technology) => (
-          <div className='w-28 h-28' key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-          </div>
+          <motion.div 
+            key={technology.name} 
+            className="w-28 h-28 flex justify-center items-center rounded-full bg-transparent p-5 transition-transform duration-30 hover:scale-105" 
+            whileHover={{ rotate: 720, boxShadow: "0px 0px 40px rgba(145, 94, 255, 1)" }} // Spin and increase glow on hover
+            style={{ boxShadow: "0px 0px 10px rgba(145, 94, 255, 0.3)" }} // Reduced initial light effect
+            transition={{ duration: 1 }} // Spin over 1 second
+          >
+            <img src={technology.icon} alt={technology.name} className="w-16 h-16 object-contain" />
+          </motion.div>
         ))}
       </div>
     </div>
-    </>
   );
 };
 

@@ -85,7 +85,10 @@ const Pricing = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-20 ml-5 mr-5 pt-2.5 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center gap-10 mt-2.5">
+      <div className="mt-20
+      
+      
+      ml-5 mr-5 pt-2.5 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center gap-10 mt-2.5">
         {pricingPlans.map((plan, index) => (
           <PricingCard key={index} index={index} {...plan} />
         ))}

@@ -25,6 +25,7 @@ export {
   Pricing, 
   Footer,
   ScrollToTop,
+
   // ComputersCanvas, 
   // StarsCanvas
 }

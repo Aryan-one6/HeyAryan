@@ -23,8 +23,8 @@ const App = () => {
         <Pricing />
         <Works />
         <Feedbacks />
-        <div className="reaktive z-0">
-          <EarthCanvas />
+        <div className="relative z-0">
+          {/* <EarthCanvas /> */}
           <Contact />
           {/* <StarsCanvas /> */}
         </div>
