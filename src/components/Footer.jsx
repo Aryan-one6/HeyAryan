@@ -1,15 +1,18 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa"; // Import the icons
-import { styles } from "../styles";
 
 const Footer = () => {
   return (
     <footer className="bg-black-100 text-white py-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        <p className="text-sm text-gray-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:justify-between items-center sm:items-center">
+        
+        {/* Copyright Section */}
+        <p className="text-sm text-gray-400 sm:order-1 order-2 sm:mt-0 mt-4">
           &copy; {new Date().getFullYear()} HeyAryan. All rights reserved.
         </p>
-        <div className="flex gap-4">
+
+        {/* Social Icons */}
+        <div className="flex gap-4 sm:order-2 order-1">
           <a
             href="https://www.linkedin.com/in/naresh-parashar-a34676213/"
             target="_blank"
@@ -43,6 +46,7 @@ const Footer = () => {
             <FaInstagram />
           </a>
         </div>
+        
       </div>
     </footer>
   );

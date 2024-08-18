@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp,  FaDownload } from "react-icons/fa";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close } from "../assets";
+import myCV from "../assets/my_cv.pdf"; 
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -151,6 +152,9 @@ const Navbar = () => {
               </a>
               <a href='https://wa.me/+919354249191' target='_blank' rel='noopener noreferrer'>
                 <FaWhatsapp className='text-white text-2xl hover:text-[#25D366] transition-colors duration-200' />
+              </a>
+              <a href={myCV} download target='_blank' rel='noopener noreferrer'>
+                <FaDownload className='text-white text-2xl sm:text-2xl hover:text-[#915EFF] transition-colors duration-200' />
               </a>
             </div>
           </div>

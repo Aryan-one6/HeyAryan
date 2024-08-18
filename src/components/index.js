@@ -9,6 +9,7 @@ import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Pricing from './Pricing';
 import Footer from './Footer';
+import ScrollToTop from './ScrollToTop'
 
 export {
   Hero,
@@ -23,6 +24,7 @@ export {
   BallCanvas, 
   Pricing, 
   Footer,
+  ScrollToTop,
   // ComputersCanvas, 
   // StarsCanvas
 }

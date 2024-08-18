@@ -38,7 +38,7 @@ const pricingPlans = [
 const PricingCard = ({ title, price, description, features, index }) => (
   <motion.div
     variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-    className="bg-gray-900 shadow-lg rounded-lg overflow-hidden flex flex-col justify-between w-full sm:w-[300px] transition-transform duration-300 hover:scale-105"
+    className="bg-gray-900 shadow-lg rounded-lg overflow-hidden flex flex-col justify-between w-full sm:w-[300px] transition-transform duration-300 hover:scale-105 shadow-xl" // Added shadow-xl for a stronger box shadow
   >
     {/* Header with adjusted font size */}
     <div className="bg-[#915EFF] text-white text-center p-4">
@@ -75,7 +75,7 @@ const PricingCard = ({ title, price, description, features, index }) => (
 
 const Pricing = () => {
   return (
-    <section id="pricing"> {/* Add the id here */}
+    <section id="pricing" className="mt-10 px-2.5 sm:px-0"> {/* Add padding on mobile mode */}
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
           Our Pricing
@@ -85,7 +85,7 @@ const Pricing = () => {
         </h2>
       </motion.div>
 
-      <div className="mt-20 pt-2.5 px-2.5 sm:px-0 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center gap-10 mt-2.5">
+      <div className="mt-20 ml-5 mr-5 pt-2.5 flex flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap justify-center gap-10 mt-2.5">
         {pricingPlans.map((plan, index) => (
           <PricingCard key={index} index={index} {...plan} />
         ))}

@@ -18,7 +18,7 @@ const Hero = () => {
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hey, I'm <span className='text-[#915EFF]'>Aryan</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-4 text-white-100`}>
+          <p className={`${styles.heroSubText} mt-4 text-gray-400`}>
             Bringing visions to life <br className='sm:block hidden' />
             through cutting-edge web Technologies.
           </p>
@@ -30,13 +30,13 @@ const Hero = () => {
                 <FaLinkedin className='text-white text-xl sm:text-2xl hover:text-[#0077B5] transition-colors duration-200' />
               </a>
               <a href='https://github.com/Aryan-one6/' target='_blank' rel='noopener noreferrer'>
-                <FaGithub className='text-white text-xl sm:text-2xl hover:text-[#333] transition-colors duration-200' />
+                <FaGithub className='text-white text-2xl sm:text-2xl hover:text-[#333] transition-colors duration-200' />
               </a>
               <a href='https://instagram.com/Aryan_one6/' target='_blank' rel='noopener noreferrer'>
-                <FaInstagram className='text-white text-xl sm:text-2xl hover:text-[#E4405F] transition-colors duration-200' />
+                <FaInstagram className='text-white text-2xl sm:text-2xl hover:text-[#E4405F] transition-colors duration-200' />
               </a>
               <a href='https://wa.me/+919354249191/' target='_blank' rel='noopener noreferrer'>
-                <FaWhatsapp className='text-white text-xl sm:text-2xl hover:text-[#25D366] transition-colors duration-200' />
+                <FaWhatsapp className='text-white text-2xl sm:text-2xl hover:text-[#25D366] transition-colors duration-200' />
               </a>
               <a href={myCV} download target='_blank' rel='noopener noreferrer'>
                 <FaDownload className='text-white text-2xl sm:text-2xl hover:text-[#915EFF] transition-colors duration-200' />

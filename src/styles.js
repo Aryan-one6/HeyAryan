@@ -18,15 +18,15 @@ export const textVariant = () => {
   return {
     hidden: {
       opacity: 0,
-      y: -20, // Less off-screen so it comes into view faster
+      y: -20, 
     },
     show: {
       opacity: 1,
       y: 0,
       transition: {
         type: "spring",
-        duration: 0.4, // Faster animation
-        delay: 0.1, // Less delay before the animation starts
+        duration: 0.4, 
+        delay: 0.1, 
       },
     },
   };

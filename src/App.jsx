@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom"
-import { About, Contact, EarthCanvas, Experience, Feedbacks, Hero, Navbar, Pricing, Tech, Works, Footer } from './components'
+import { About, Contact, EarthCanvas, Experience, Feedbacks, Hero, Navbar, Pricing, Tech, Works, Footer, ScrollToTop } from './components'
 import { Analytics } from "@vercel/analytics/react"
 // import Sidebar from "./components/Sidebar";
 // import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -29,7 +29,7 @@ const App = () => {
           {/* <StarsCanvas /> */}
         </div>
         <Footer />
-
+<ScrollToTop/>
       </div>
     </BrowserRouter>
   )
