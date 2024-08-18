@@ -32,7 +32,7 @@ const Tech = () => {
         {technologies.map((technology) => (
           <motion.div 
             key={technology.name} 
-            className={`w-28 h-28 flex justify-center items-center rounded-full bg-transparent p-5 transition-transform duration-100 ${
+            className={`w-28 h-28 flex justify-center items-center rounded-full bg-transparent p-5 transition-transform duration-300 ${
               activeTech === technology.name ? "scale-110" : ""
             }`}
             whileHover={{
@@ -45,9 +45,10 @@ const Tech = () => {
             onClick={() => handleTouchStart(technology.name)} // Apply scale and spin on click for mobile
             animate={{
               rotate: activeTech === technology.name ? 720 : 0, // Spin effect
+              boxShadow: activeTech === technology.name ? "0px 0px 20px rgba(145, 94, 255, 1)" : "0px 0px 10px rgba(145, 94, 255, 0.3)", // Increase glow on touch
             }}
             transition={{ 
-              duration: 1.5, // Duration for spin
+              duration: 1.5, // Duration for spin and glow
               ease: "easeInOut", // Smooth transition
             }}
             style={{ 
