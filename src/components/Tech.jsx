@@ -32,16 +32,17 @@ const Tech = () => {
         {technologies.map((technology) => (
           <motion.div 
             key={technology.name} 
-            className={`w-28 h-28 flex justify-center items-center rounded-full bg-transparent p-5 transition-transform duration-300 ${
+            className={`w-28 h-28 flex justify-center items-center rounded-full bg-transparent p-5 transition-transform duration-100 ${
               activeTech === technology.name ? "scale-110" : ""
             }`}
-            whileHover={{ 
+            whileHover={{
+              rotate: 720, // Spin on hover for desktop
               scale: 1.1, 
-              boxShadow: "0px 0px 60px rgba(145, 94, 255, 1)" 
-            }} // Increase glow on hover
+              boxShadow: "0px 0px 20px rgba(145, 94, 255, 1)" 
+            }} // Spin and increase glow on hover
             onTouchStart={() => handleTouchStart(technology.name)}
             onTouchEnd={handleTouchEnd}
-            onClick={() => handleTouchStart(technology.name)} // Apply scale on click for mobile
+            onClick={() => handleTouchStart(technology.name)} // Apply scale and spin on click for mobile
             animate={{
               rotate: activeTech === technology.name ? 720 : 0, // Spin effect
             }}
@@ -50,8 +51,7 @@ const Tech = () => {
               ease: "easeInOut", // Smooth transition
             }}
             style={{ 
-              boxShadow: activeTech === technology.name ? "0px 0px 60px rgba(145, 94, 255, 1)" : "0px 0px 10px rgba(145, 94, 255, 0.3)", 
-              transition: "transform 2s, box-shadow 1.5s" 
+              boxShadow: "0px 0px 5px rgba(145, 94, 255, 0.3)", // Initial light effect
             }}
           >
             <img src={technology.icon} alt={technology.name} className="w-16 h-16 object-contain" />
