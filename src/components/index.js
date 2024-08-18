@@ -8,6 +8,7 @@ import Works from './Works';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import Pricing from './Pricing';
+import Footer from './Footer';
 
 export {
   Hero,
@@ -21,6 +22,7 @@ export {
   EarthCanvas, 
   BallCanvas, 
   Pricing, 
+  Footer,
   // ComputersCanvas, 
   // StarsCanvas
 }

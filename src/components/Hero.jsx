@@ -5,9 +5,9 @@ import myCV from "../assets/my_cv.pdf"; // Importing your CV
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`relative w-full h-screen mx-auto flex items-center`}>
       <div
-        className={`absolute inset-0 top-[180px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-0 bottom-0 flex justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 gap-5`} /* Adjusted padding for desktop */
       >
         <div className='flex flex-col justify-center items-center mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
@@ -24,7 +24,7 @@ const Hero = () => {
           </p>
 
           {/* Social Media Icons and Download CV Button */}
-          <div className='flex flex-col sm:flex-row sm:items-center mt-8'> {/* Added mt-8 for spacing */}
+          <div className='flex flex-wrap items-center gap-4 mt-8'>
             <div className='flex gap-4'>
               <a href='https://www.linkedin.com/in/naresh-parashar-a34676213/' target='_blank' rel='noopener noreferrer'>
                 <FaLinkedin className='text-white text-2xl hover:text-[#0077B5] transition-colors duration-200' />
@@ -41,7 +41,7 @@ const Hero = () => {
             </div>
 
             {/* Download CV Button */}
-            <div className='mt-4 sm:mt-0 sm:ml-6'>
+            <div>
               <a
                 href={myCV} // Linking to your CV
                 download
