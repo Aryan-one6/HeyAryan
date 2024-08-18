@@ -36,17 +36,23 @@ const Tech = () => {
               activeTech === technology.name ? "scale-110" : ""
             }`}
             whileHover={{ 
-              rotate: 720, 
               scale: 1.1, 
               boxShadow: "0px 0px 60px rgba(145, 94, 255, 1)" 
-            }} // Spin and increase glow on hover
+            }} // Increase glow on hover
             onTouchStart={() => handleTouchStart(technology.name)}
             onTouchEnd={handleTouchEnd}
             onClick={() => handleTouchStart(technology.name)} // Apply scale on click for mobile
+            animate={{
+              rotate: activeTech === technology.name ? 720 : 0, // Spin effect
+            }}
+            transition={{ 
+              duration: 1.5, // Duration for spin
+              ease: "easeInOut", // Smooth transition
+            }}
             style={{ 
               boxShadow: activeTech === technology.name ? "0px 0px 60px rgba(145, 94, 255, 1)" : "0px 0px 10px rgba(145, 94, 255, 0.3)", 
               transition: "transform 2s, box-shadow 1.5s" 
-            }} // Adjust transition for mobile
+            }}
           >
             <img src={technology.icon} alt={technology.name} className="w-16 h-16 object-contain" />
           </motion.div>
@@ -57,6 +63,7 @@ const Tech = () => {
 };
 
 export default SectionWrapper(Tech, "");
+
 
 
 // import React from "react";
