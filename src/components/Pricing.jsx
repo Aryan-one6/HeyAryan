@@ -41,7 +41,7 @@ const PricingCard = ({ title, price, description, features, index }) => (
     className="bg-gray-900 shadow-lg rounded-lg overflow-hidden flex flex-col justify-between w-full sm:w-[300px] transition-transform duration-300 hover:scale-105 shadow-xl" // Added shadow-xl for a stronger box shadow
   >
     {/* Header with adjusted font size */}
-    <div className="bg-[#915EFF] text-white text-center p-4">
+    <div className="bg-[#7033f6] text-white text-center p-4">
       <h3 className="text-[20px] font-bold">{title}</h3>
       <p className="text-[18px] font-semibold mt-2">{price}</p>
     </div>
