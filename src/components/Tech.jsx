@@ -7,10 +7,15 @@ import { textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
 const Tech = () => {
-  const [clickedTech, setClickedTech] = useState(null);
+  const [activeTech, setActiveTech] = useState(null);
 
-  // Function to determine if the device is mobile
-  const isMobile = window.innerWidth <= 768;
+  const handleTouchStart = (technologyName) => {
+    setActiveTech(technologyName);
+  };
+
+  const handleTouchEnd = () => {
+    setActiveTech(null);
+  };
 
   return (
     <div id="tech">
@@ -28,17 +33,19 @@ const Tech = () => {
           <motion.div 
             key={technology.name} 
             className={`w-28 h-28 flex justify-center items-center rounded-full bg-transparent p-5 transition-transform duration-300 ${
-              clickedTech === technology.name ? "scale-110" : ""
+              activeTech === technology.name ? "scale-110" : ""
             }`}
             whileHover={{ 
               rotate: 720, 
               scale: 1.1, 
-              boxShadow: isMobile ? "0px 0px 60px rgba(145, 94, 255, 1)" : "0px 0px 40px rgba(145, 94, 255, 1)" 
+              boxShadow: "0px 0px 60px rgba(145, 94, 255, 1)" 
             }} // Spin and increase glow on hover
-            onClick={() => setClickedTech(technology.name)} // Apply scale on click for mobile
+            onTouchStart={() => handleTouchStart(technology.name)}
+            onTouchEnd={handleTouchEnd}
+            onClick={() => handleTouchStart(technology.name)} // Apply scale on click for mobile
             style={{ 
-              boxShadow: "0px 0px 10px rgba(145, 94, 255, 0.3)", 
-              transition: isMobile ? "transform 2s, box-shadow 1.5s" : "transform 1s, box-shadow 1s" 
+              boxShadow: activeTech === technology.name ? "0px 0px 60px rgba(145, 94, 255, 1)" : "0px 0px 10px rgba(145, 94, 255, 0.3)", 
+              transition: "transform 2s, box-shadow 1.5s" 
             }} // Adjust transition for mobile
           >
             <img src={technology.icon} alt={technology.name} className="w-16 h-16 object-contain" />
@@ -50,7 +57,6 @@ const Tech = () => {
 };
 
 export default SectionWrapper(Tech, "");
-
 
 
 // import React from "react";
