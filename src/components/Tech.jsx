@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import { technologies } from "../constants";
@@ -7,6 +7,8 @@ import { textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
 const Tech = () => {
+  const [clickedTech, setClickedTech] = useState(null);
+
   return (
     <div id="tech">
       <motion.div variants={textVariant()} className="text-center">
@@ -22,14 +24,11 @@ const Tech = () => {
         {technologies.map((technology) => (
           <motion.div 
             key={technology.name} 
-            className="w-28 h-28 flex justify-center items-center rounded-full bg-transparent p-5 transition-transform duration-300 hover:scale-105" 
+            className={`w-28 h-28 flex justify-center items-center rounded-full bg-transparent p-5 transition-transform duration-300 ${
+              clickedTech === technology.name ? "scale-110" : ""
+            }`}
             whileHover={{ rotate: 720, scale: 1.1, boxShadow: "0px 0px 40px rgba(145, 94, 255, 1)" }} // Spin and increase glow on hover
-            onHoverStart={() => {
-              // Additional code for touch devices if needed
-            }}
-            onHoverEnd={() => {
-              // Additional code for touch devices if needed
-            }}
+            onClick={() => setClickedTech(technology.name)} // Apply scale on click for mobile
             style={{ boxShadow: "0px 0px 10px rgba(145, 94, 255, 0.3)" }} // Reduced initial light effect
             transition={{ duration: 1 }} // Spin over 1 second
           >
@@ -42,6 +41,7 @@ const Tech = () => {
 };
 
 export default SectionWrapper(Tech, "");
+
 
 
 
