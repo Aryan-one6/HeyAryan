@@ -73,6 +73,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+// import { StarsCanvas } from "./canvas";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='w-full xs:w-[200px] sm:w-[250px] p-[5px]'>
@@ -104,7 +105,7 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <>
+    <> 
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
